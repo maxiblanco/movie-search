@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://bootswatch.com/4/flatly/bootstrap.min.css"
+    />
+    <title>Document</title>
+    <style>
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#"><h1>Movie Search</h1></a>
+      </nav>
+    </header>
+    <main class="container mt-2">
+      <form action="submit" id="search">
+        <fieldset class="form-group">
+          <label for="searchTerm">Search</label>
+          <input
+            class="form-control"
+            type="text"
+            name="searchTerm"
+            id="searchTerm"
+            placeholder="Enter a movie title."
+          />
+          <button type="submit" class="btn btn-primary">GO</button>
+        </fieldset>
+      </form>
+      <div class="container">
+        <ul class="grid" id="movie-list"></ul>
+      </div>
+    </main>
+    <script src="app.js" charset="utf-8"></script>
+  </body>
+</html>
